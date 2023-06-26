@@ -14,5 +14,4 @@ File Upload Endpoint Hit
 Uploaded File: Test.png
 File Size: 40404
 MIME Header: map[Content-Disposition:[form-data; name="myFile"; filename="Test.png"] Content-Type:[image/png]]
-open temp-images/upload-2954739551.png: no such file or directory
 ```

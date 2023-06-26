@@ -40,10 +40,13 @@ func uploadFile(w http.ResponseWriter, r *http.Request) {
 	fileBytes, err := io.ReadAll(file)
 	if err != nil {
 		fmt.Println(err)
+		w.WriteHeader(http.StatusInternalServerError)
+		fmt.Fprintf(w, "Failed to upload file\n")
 	}
 	// write this byte array to our temporary file
 	tempFile.Write(fileBytes)
 	// return that we have successfully uploaded our file!
+	w.WriteHeader(http.StatusAccepted)
 	fmt.Fprintf(w, "Successfully Uploaded File\n")
 }
 
