@@ -1,4 +1,4 @@
-module github.com/Azanul/grpc
+module github.com/Azanul/Fundamentals-of-Backend-Engineering/grpc/grpc
 
 go 1.20
 
